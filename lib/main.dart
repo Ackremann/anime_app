@@ -4,6 +4,7 @@ import 'package:flutter/material.dart';
 import 'package:flex_color_scheme/flex_color_scheme.dart';
 import 'package:flutter/services.dart';
 
+
 void main() {
   runApp(const MyApp());
 }
@@ -15,7 +16,6 @@ class MyApp extends StatelessWidget {
   Widget build(BuildContext context) {
     return MaterialApp(
       debugShowCheckedModeBanner: false,
-      home: const BaseView(),
       darkTheme: FlexThemeData.dark(
         scheme: FlexScheme.indigo,
       ),
@@ -23,6 +23,7 @@ class MyApp extends StatelessWidget {
         scheme: FlexScheme.indigo,
       ),
       themeMode: ThemeMode.dark,
+      home: const BaseView(),
     );
   }
 }

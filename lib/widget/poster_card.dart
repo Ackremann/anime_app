@@ -1,13 +1,16 @@
 import 'package:flutter/material.dart';
 
 import '../const/responsive/responsive.dart';
+
 class PosterCard extends StatelessWidget {
   final String text;
   final String imageUrl;
+  final double width;
 
   const PosterCard({
     required this.text,
     required this.imageUrl,
+    this.width = 1.8,
     Key? key,
   }) : super(key: key);
 
@@ -16,7 +19,7 @@ class PosterCard extends StatelessWidget {
     return Padding(
       padding: const EdgeInsets.only(bottom: 15, left: 20),
       child: Container(
-        width: sizeFromWidth(context, 1.8),
+        width: sizeFromWidth(context, width),
         decoration: BoxDecoration(
           borderRadius: BorderRadius.circular(12.5),
         ),
@@ -33,7 +36,7 @@ class PosterCard extends StatelessWidget {
           footer: Padding(
             padding: const EdgeInsets.only(bottom: 8.0),
             child: Text(
-              'AnimeName',
+              text,
               textAlign: TextAlign.center,
               // style: Theme.of(context).textTheme.headline6,
               overflow: TextOverflow.ellipsis,
